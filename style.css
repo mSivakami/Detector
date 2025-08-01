@@ -1,19 +1,97 @@
 body {
-  background: #111;
-  color: #eee;
-  font-family: 'Comic Sans MS', cursive;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6e44ff, #b892ff);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Heading pinned to top */
+#main-heading {
   text-align: center;
+  margin: 20px 0 10px;
+}
+
+/* Flex container holding video + emoji/quote */
+.container {
+  display: flex;
+  gap: 40px;
   padding: 30px;
+  max-width: 1000px;
+  width: 100%;
 }
 
+/* Left section for camera and buttons */
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Video box */
 video {
-  border: 3px solid #eee;
-  border-radius: 10px;
-  margin-top: 20px;
+  width: 600px; /* increased from 480px */
+  height: 450px; /* increased proportionally */
+  border-radius: 15px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px #fff;
+  margin-bottom: 20px;
 }
 
-#quote {
-  font-size: 1.5em;
-  margin-top: 20px;
-  color: #ff4081;
+/* Buttons row under video */
+button {
+  background: #fff;
+  color: #6e44ff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;         /* Increased padding */
+  font-size: 18px;            /* Increased font size */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+/* Right side: emoji and quote stacked */
+.right-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 450px; /* Match the camera height */
+  justify-content: space-between;
+}
+
+/* Emoji and quote styling */
+#emoji-box {
+  width: 300px; /* Slightly wider to match video scaling */
+  min-height: 170px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 5rem;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#quote-box {
+  width: 300px; /* Slightly wider to match video scaling */
+  min-height: 170px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 2rem;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }

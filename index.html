@@ -2,13 +2,34 @@
 <head>
   <title>Sarcasm Detector</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <h1>Your Face Looks... Interesting</h1>
-  <video id="video" autoplay muted></video>
-  <div id="quote"></div>
+  <h1 id="main-heading">Let's see what your face is really saying...</h1>
+
+   <div class="outer-wrapper">
+      <div class="container">
+    <!-- Left: Video and Buttons -->
+    <div class="camera-section">
+      <video id="video" autoplay muted></video>
+      <div class="button-row">
+        <button id="start-btn">🎬 Start Recording</button>
+        <button id="stop-btn">🛑 Download Recording</button>
+      </div>
+    </div>
+
+    <div class="right-boxes">
+      <div id="emoji-box" class="funky-box">😐</div>
+      <div id="quote-box" class="funky-box">Waiting for a face to judge...</div>
+    </div>
+  </div>
+  </div>
+
+
   <script defer src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
   <script defer src="script.js"></script>
-  
 </body>
 </html>
+
+
+
