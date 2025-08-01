@@ -1,44 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Sarcasm Detector</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- MediaPipe -->
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.min.js"></script>
-
-<!-- Confetti -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
+  <meta charset="UTF-8">
+  <title>Funny Login</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  <h1 id="main-heading">Let's see what your face is really saying...</h1>
 
-   <div class="outer-wrapper">
-      <div class="container">
-    <!-- Left: Video and Buttons -->
-    <div class="camera-section">
-      <video id="video" autoplay muted></video>
-      <canvas class="gestureCanvas" width="640" height="480" style="position:absolute; top:0; left:0;"></canvas>
+  <button id="loginBtn">Login</button>
 
-      <div class="button-row">
-        <button id="start-btn">🎬 Start Recording</button>
-        <button id="stop-btn">🛑 Download Recording</button>
-      </div>
-    </div>
-
-    <div class="right-boxes">
-      <div id="emoji-box" class="funky-box">😐</div>
-      <div id="quote-box" class="funky-box">Waiting for a face to judge...</div>
-    </div>
-  </div>
-  </div>
-
-
-  <script defer src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
-  <script defer src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
-
-
-
