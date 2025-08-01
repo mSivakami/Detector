@@ -149,3 +149,71 @@ document.getElementById("stop-btn").addEventListener("click", () => {
     console.log("Recording stopped");
   }
 });
+const canvas = document.querySelector('.gestureCanvas');
+const ctx = canvas.getContext('2d');
+
+const hands = new Hands({
+  locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+});
+
+hands.setOptions({
+  maxNumHands: 1,
+  modelComplexity: 1,
+  minDetectionConfidence: 0.7,
+  minTrackingConfidence: 0.7
+});
+
+hands.onResults(onHandResults);
+
+function isThumbsUp(landmarks) {
+  const thumbTip = landmarks[4];
+  const indexTip = landmarks[8];
+  const middleTip = landmarks[12];
+  const ringTip = landmarks[16];
+  const pinkyTip = landmarks[20];
+
+  // Check thumb is up and others are folded
+  return (
+    thumbTip.y < indexTip.y &&
+    middleTip.y > thumbTip.y &&
+    ringTip.y > thumbTip.y &&
+    pinkyTip.y > thumbTip.y
+  );
+}
+
+let lastGesture = null;
+
+function onHandResults(results) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  if (results.multiHandLandmarks.length > 0) {
+    const landmarks = results.multiHandLandmarks[0];
+    drawConnectors(ctx, landmarks, HAND_CONNECTIONS, { color: '#0f0' });
+    drawLandmarks(ctx, landmarks, { color: '#f0f', radius: 5 });
+
+    if (isThumbsUp(landmarks) && lastGesture !== "thumbs_up") {
+      lastGesture = "thumbs_up";
+      console.log("👍 Detected thumbs up");
+
+      confetti({
+        particleCount: 100,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
+
+      document.getElementById("quote").innerText = `"Wow, someone’s feeling *very* positive today."`;
+    } else if (!isThumbsUp(landmarks)) {
+      lastGesture = null;
+    }
+  }
+}
+
+const cam = new Camera(video, {
+  onFrame: async () => {
+    await hands.send({ image: video });
+  },
+  width: 640,
+  height: 480
+});
+cam.start();
+
