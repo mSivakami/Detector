@@ -1,0 +1,19 @@
+body {
+  background: #111;
+  color: #eee;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding: 30px;
+}
+
+video {
+  border: 3px solid #eee;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#quote {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #ff4081;
+}
