@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #6e44ff, #b892ff);
+  background: linear-gradient(135deg, #ef44ff, #b65baa);
   font-family: 'Comic Sans MS', cursive, sans-serif;
   color: #fff;
   display: flex;
@@ -52,6 +52,7 @@ video {
 button {
   background: #fff;
   color: #6e44ff;
+  font-family: 'Corben', cursive;
   border: none;
   border-radius: 8px;
   padding: 14px 24px;         /* Increased padding */
@@ -87,6 +88,7 @@ button {
 #quote-box {
   width: 300px; /* Slightly wider to match video scaling */
   min-height: 170px;
+  font-family: 'Corben', cursive;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 20px;

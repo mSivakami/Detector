@@ -57,28 +57,28 @@ body {
 
 /* Funky Login Button */
 #loginBtn {
+  font-family: 'Corben', cursive;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #fff;
-  background: linear-gradient(135deg, #ff00c8, #4800ff); /* bright pink to strong purple */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* sunset: orange to coral */
   background-size: 200% 200%;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 0 10px #ff33cc, 0 0 20px #9900ff;
+  box-shadow: 0 0 10px #ffae88, 0 0 20px #f76032;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: absolute;
   max-width: 150px;
-  width: 35vw;
+  width: 40vw;
   min-width: 100px;
   z-index: 10;
   animation: shine 3s infinite ease-in-out;
 }
 
-/* Glow hover */
 #loginBtn:hover {
   transform: scale(1.1) rotate(-3deg);
-  box-shadow: 0 0 25px #ff99ee, 0 0 40px #b266ff;
+  box-shadow: 0 0 25px #ffc1a1, 0 0 40px #ff7043;
 }
 
 /* Button entrance */

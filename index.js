@@ -6,7 +6,7 @@ const hoverMessages = [
   "Nope.",
   "Too slow!",
   "Try harder!",
-  "Getting warmer...",
+  "Getting warmer..",
   "Almost there!",
   "Okay, fine. Click me!"
 ];

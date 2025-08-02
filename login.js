@@ -76,21 +76,30 @@ function getTopExpression(expressions) {
 const sarcasticQuotes = {
   happy: [
     "Oh, someone got 8 hours of sleep. Show off.",
-    "Smiling? What are you up to?"
+    "Koodthal chiricha..Kodthal karayandi verum!",
+    "Smiling? What are you up to?",
+    "Ayyeee oola chiri",
+    "Santhosham kond enik irikkan vayyeee"
   ],
   sad: [
-    "Cry me a river... but like, hurry up.",
-    "Wow, bringing the mood down again, huh?"
+    "Tears won't fix your code... or your love life.",
+    "Allelum mondha kollula ini karnjat kolam aakano",
+    "Wow, bringing the mood down again, huh?",
+    "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."
   ],
   angry: [
     "Easy there, Hulk. It’s just a website.",
-    "If looks could kill, I’d be... mildly inconvenienced."
+    "Dheshyam onnunum oru pariharam allaa!",
+    "Who made u mad...I would like to thank them"
   ],
   surprised: [
     "You look like you just saw the bill after shopping online.",
-    "Wow, life still surprises you?"
+    "Wow, life still surprises you?",
+    "That face says 'I left the stove on.'",
+    "Kutti mammaa Njn njetti mammaa"
   ],
   neutral: [
+    "Is that your thinking face or are you just stuck?",
     "Poker face much?",
     "Are you alive or buffering?"
   ]
